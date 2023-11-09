@@ -195,6 +195,11 @@ def get_chat_settings() -> ChatSettings:
 
 IMAGE_WIDTH = 375
 st.title("Odyssey - Live Storytelling")
+st.write(
+    "Odyssey is an interactive storytelling experience that allows you to create stories with the help of AI.\
+Set the stage with your first message, and let GPT contunue and narrate the story,\n\
+and DALL-E to generate a cool illustration to go along with it. Then it's your turn to continue the story. You can continue the story as long as you like!"
+)
 
 st.sidebar.info(
     "The OpenAI API Key is stored in Streamlit's session state, and is not saved on disk. \
@@ -211,7 +216,7 @@ st.info(
     Please ensure to set spending limits in your OpenAI API dashboard at https://platform.openai.com/usage"
 )
 open_ai_api_key_input = st.text_input(
-    "OpenAI API Key",
+    "OpenAI API Key (starts with 'sk-')",
     type="password",
     key="open-ai-api-key-input",
     disabled=is_api_client_set(),
@@ -237,7 +242,7 @@ if "client" not in st.session_state:
 if not is_chat_started():
     narrator_model = st.selectbox(
         "Narrator Model",
-        ["gpt-3.5-turbo", "gpt-4-1106-preview"],
+        ["gpt-4-1106-preview", "gpt-3.5-turbo"],
         help="GPT3.5 is cheaper, but GPT4 is more creative.",
     )
     tts_model = st.selectbox(
