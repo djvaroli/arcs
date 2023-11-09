@@ -1,0 +1,6 @@
+.env
+
+# ignore messages for secret story!
+frames/*
+narration/*
+frame_text.json
