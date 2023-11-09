@@ -197,8 +197,8 @@ IMAGE_WIDTH = 375
 st.title("Odyssey - Live Storytelling")
 st.write(
     "Odyssey is an interactive storytelling experience that allows you to create stories with the help of AI.\
-Set the stage with your first message, and let GPT contunue and narrate the story,\n\
-and DALL-E to generate a cool illustration to go along with it. Then it's your turn to continue the story. You can continue the story as long as you like!"
+Set the stage with your first message, and let GPT continue and narrate the story,\n\
+and DALL-E to generate a cool illustration to go along with it. Then it's your turn to continue the story. You can go on as long as you like (just remember to keep tabs on spending)!"
 )
 
 st.sidebar.info(
